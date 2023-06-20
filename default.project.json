@@ -1,0 +1,13 @@
+{
+	"name": "suphi-data-store",
+	"tree":{
+		"$className": "DataModel",
+		"ServerScriptService":{
+			"$className": "ServerScriptService",
+			"prject":{
+				"$className":"ModuleScript",
+				"$path": "./out"
+			}
+		}
+	}
+}
