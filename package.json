@@ -1,17 +1,29 @@
 {
   "name": "@rbxts/suphi-datastore",
   "version": "1.0.0",
-  "description": "",
+  "description": "About typescript support for suphi's dataStore module",
   "main": "out/init.lua",
+  "typings": "out/index.d.ts",
   "scripts": {
     "build": "rbxtsc",
     "watch": "rbxtsc -w",
     "prepublishOnly": "npm run build"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "types": "out/index.d.ts",
+  "keywords": [
+    "datastore",
+    "roblox",
+    "roblox-typescript",
+    "roblox-ts"
+  ],
+  "repository":{
+    "url": "https://github.com/AhdLibya/suphi-datastore",
+    "type": "git"
+  },
+  "homepage": "https://github.com/AhdLibya/suphi-datastore/blob/master/README.md",
+  "author": {
+    "name": "Ahdlibya"
+  },
+  "license": "OBSD",
   "files": [
     "out",
     "!**/*.tsbuildinfo"
@@ -31,7 +43,5 @@
     "prettier": "^2.8.8",
     "typescript": "^5.1.3"
   },
-  "dependencies": {
-    "@rbxts/suphi-datastore": "file:rbxts-suphi-datastore-1.0.0.tgz"
-  }
+  "dependencies": {}
 }

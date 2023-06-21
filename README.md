@@ -291,14 +291,14 @@ type optional = {
 	Level: number;
 	Coins: number;
 	Inventory: {};
-	DeveloperProducts: {};
+	DeveloperProducts:	Map<string , number>;
 };
 
 const template: optional = {
 	Level: 0,
 	Coins: 0,
 	Inventory: {},
-	DeveloperProducts: {},
+	DeveloperProducts: new Map<string , number>(),
 };
 
 Players.PlayerAdded.Connect((player) => {

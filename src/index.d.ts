@@ -131,7 +131,7 @@ declare namespace DataStore {
 		/**
 		 *	Current state of the session [nil = Destroyed] [false = Closed] [true = Open]
 		 */
-		readonly State?: boolean;
+		readonly State: boolean | undefined;
 		/**
 		 *	Set to true if this session was created by the hidden constructor
 		 */
