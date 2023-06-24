@@ -1,8 +1,13 @@
-# 🎊🎊 Out of Beta 🎊🎊
-
 # SuphisDataStoreModule 
 
 Before I start, this is not mine but Suphi#3388 module, I got permission to put this up in github. Here is the discord: https://discord.gg/B3zmjPVBce
+
+# More Details on How to Use
+1. [Basics](https://www.youtube.com/watch?v=UAdE8-AfuMo&t=2785s)
+2. [Advanced](https://www.youtube.com/watch?v=ykWkDov_x-8)
+3. [Extras](https://www.youtube.com/watch?v=4rNva5qXj-c&t=1s)
+4. [DataStore2 vs ProfileService vs Suphi's DataStore](https://www.youtube.com/watch?v=ARPfIt16sXI&t=4s)
+
 
 # Features 
 
