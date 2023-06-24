@@ -237,7 +237,7 @@ DataStore.__shared = {
 	end,
 	Remove = function(proxy, id)
 		local dataStore = getmetatable(proxy)
-		if type(dataStore) ~= "table" or dataStore.__shared ~= DataStore.__shared then error("Attempt to RemoveQueue failed: Passed value is not a DataStore", 3) end
+		if type(dataStore) ~= "table" or dataStore.__shared ~= DataStore.__shared then error("Attempt to Remove failed: Passed value is not a DataStore", 3) end
 		if type(id) ~= "string" then error("Attempt to RemoveQueue failed: Passed value is not a string", 3) end
 		local success, errorMessage
 		for i = 1, 3 do
@@ -254,7 +254,7 @@ DataStore.__shared = {
 	end,
 	Reconcile = function(proxy, template)
 		local dataStore = getmetatable(proxy)
-		if type(dataStore) ~= "table" or dataStore.__shared ~= DataStore.__shared then error("Attempt to Clone failed: Passed value is not a DataStore", 3) end
+		if type(dataStore) ~= "table" or dataStore.__shared ~= DataStore.__shared then error("Attempt to Reconcile failed: Passed value is not a DataStore", 3) end
 		if dataStore.__public.Value == nil then
 			dataStore.__public.Value = Clone(template)
 		elseif type(dataStore.__public.Value) == "table" and type(template) == "table" then
@@ -263,7 +263,7 @@ DataStore.__shared = {
 	end,
 	Usage = function(proxy)
 		local dataStore = getmetatable(proxy)
-		if type(dataStore) ~= "table" or dataStore.__shared ~= DataStore.__shared then error("Attempt to Clone failed: Passed value is not a DataStore", 3) end
+		if type(dataStore) ~= "table" or dataStore.__shared ~= DataStore.__shared then error("Attempt to Usage failed: Passed value is not a DataStore", 3) end
 		if dataStore.__public.Value == nil then return 0, 0 end
 		if type(dataStore.__public.Metadata.Compress) ~= "table" then
 			local characters = #httpService:JSONEncode(dataStore.__public.Value)
@@ -413,7 +413,7 @@ end
 
 CloseTask = function(runningTask, proxy)
 	local dataStore = getmetatable(proxy)
-	if dataStore.__public.State == false then for thread in runningTask:Iterate() do task.defer(thread) end return end
+	if dataStore.__public.State == false then for thread in runningTask:Iterate() do task.defer(thread, "Success") end return end
 	dataStore.__public.State = false
 	local response, responseData = nil, nil
 	if dataStore.__public.SaveOnClose == true then response, responseData = Save(proxy, 3) end
